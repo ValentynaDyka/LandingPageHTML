@@ -1,0 +1,794 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --semi-black: #2F2F2F;
+    --red: #EE3838;
+    --gray: #C5C5C5;
+    --lightGray: #ECECEC;
+}
+
+.container {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+   
+}
+.uppercase{
+    text-transform: uppercase;
+}
+@media (min-width: 1280px) {
+    .container{
+        width: 1100px;
+        padding: 0 15px;
+    }
+
+}
+
+.container{
+    margin: 0 auto;
+    display: block;
+}
+
+.hero {
+    background: url('images/hero-background.webp') no-repeat center center / cover;
+    height: 495px;
+    max-height: 495px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero p {
+    font-weight: 400; 
+    font-size: 16px;
+    margin: 20px 0; /* Нормальний текст для параграфа */
+}
+
+.hero p.subtitle{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 1.2rem auto;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 14px;
+    color: white;
+    background-color: var(--red);
+    border-radius: 500px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.8s;
+}
+
+.button:hover {
+    transform: scale(1.05); /* Ефект масштабування при наведенні */
+}
+
+
+.wave-container {
+    background: url(images/wave.svg) no-repeat center bottom / cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 82px;
+    display: flex;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.hero-scroll{
+    display: flex;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+.hero-scroll img{
+ width: 50%;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background: url('images/hero-back-mob.webp') no-repeat center center / cover;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+    .wave-container{
+        display: none;
+    }
+
+}
+
+
+
+
+/* Features */
+.section {
+    padding: 70px 20px;
+}
+
+.title-border {
+    height: 1px;
+    background-color: var(--gray);
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.title-border::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 8px;
+    background-color: var(--red);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: -4px;
+    border-radius: 4px;
+}
+.title {
+    display: block;
+    margin: 0 20px; 
+    position: relative;
+}
+
+.title-section {
+    text-align: center;
+    position: relative;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.features-title{
+    margin: auto;
+}
+
+.features-title h2 {
+    font-size: 40px;
+    color: var(--semi-black);
+    text-align: center;
+}
+.features-title h2 span{
+    font-weight: 400;
+}
+
+.features-container {
+    display: flex;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.tag {
+    top: 10%; /* відступ зверху, регулюйте за потребою */
+    left: 0;
+    width: 100%;
+    color:var(--semi-black);
+    font-size: 18px;
+    font-weight: 900;
+    position: relative;
+    z-index: 2;
+}
+
+.features-tag span{
+  background-color:var(--red);
+  border-radius: 0 2rem 2rem 0;
+  display: inline-block;
+  color: white; /* білий колір тексту */
+  padding: 10px 25px;
+  margin-right: 0.5rem;
+}
+
+.features-tag p{
+background-color: #fff;
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.features-tag .aroma-count::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    border-top: 2px solid #D9D9D9; /* Пунктирна лінія по центру контейнера */
+    z-index: -1;
+}
+
+
+.features-image-container {
+    box-shadow: 0 2px 22px 0 rgb(0, 0, 0, 0.14);
+    border-radius: 1rem;
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+}
+
+.features-image-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background: #fff;
+    box-shadow: 0 2px 22px 0 rgb(0, 0, 0, 0.14);
+    transform: rotate(-5deg);
+    border-radius: 1rem;
+}
+
+.circle-image {
+    overflow: hidden; /* обрізає зображення поза краями круга */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circle-image img{
+    width: 75%;
+    z-index: 2;
+}
+
+.features-image img {
+    width: 80%;
+    height: auto;
+}
+
+
+/* Стилі для контейнера з іконками та текстом */
+.advantages {
+    width: 50%;
+    position: relative;
+    padding-left: 40px; /* Відступ зліва для відображення іконок та ліній */
+}
+
+/* Стилі для окремих блоків переваг */
+.advantage {
+    position: relative;
+    padding-left: 40px; 
+    margin-bottom: 30px; 
+}
+
+
+.advantage-icon {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+.advantage:hover .advantage-icon {
+    transform: scale(1.1); /* Збільшення іконки */
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5); /* Червоне підсвічування */
+}
+
+
+/* Стилі для пунктирних ліній між іконками */
+.advantage::after {
+    content: '';
+    position: absolute;
+    left: 10px; 
+    top: 25px; 
+    bottom: -20px; 
+    width: 2px; 
+    border-left: 2px dashed #ddd; 
+}
+.advantage:last-child:after{
+    bottom: 0px;
+}
+
+.advantage h3 {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--semi-black); 
+}
+
+.advantage p {
+    font-size: 16px;
+    color: var(--semi-black); 
+    margin-top: 5px;
+} 
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .features-container{
+        padding: 50px 0px;
+    }
+    .features {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .features-image{
+        width: auto;
+    }
+
+    .advantages {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .advantage {
+        padding-left: 30px;
+    }
+    .features-title h2 {
+        font-size: 30px;
+    }
+    .features-container{
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .features-title{
+        width: 780px;
+    }
+}
+
+
+/* Create look */
+
+.create-your-look {
+    position: relative;
+    color: white;
+    background: url('images/hero-set.webp') no-repeat center center / cover;
+}
+
+.content-container {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.create-your-look-content, .image-content {
+    flex: 1; /* Рівне поділення простору між колонками */
+    margin-top: -50px;
+}
+
+.create-your-look-content {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex: 1;
+}
+
+.create-your-look-content h2{
+    font-size: 80px;
+    font-weight: 900;
+    margin: 0px;
+}
+.create-your-look-call{
+    display: flex;
+    column-gap: 2rem;
+    font-size: 20px;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 120%;
+    height: auto;
+    display: block;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    color:transparent;
+}
+
+.triangle-top {
+    top: -5%;
+    right: 15%;
+    transform: translateX(-30%);
+    transition: all 0.9s;
+}
+
+.triangle-bottom {
+    bottom: 10%;
+    left: 5%;
+    transform: translateX(-30%) rotateZ(0deg);
+    transition: all 0.9s;
+}
+
+
+
+
+/* Catalog */
+
+.aroma-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки однакової ширини */
+    gap: 30px; /* Відступи між карточками */
+    padding: 50px 20px;
+    max-width: 1100px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Центрування контейнера */
+}
+
+.aroma-card {
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 1rem;
+}
+
+.aroma-card:hover {
+    transform: scale(1.05); /* Ефект масштабування при наведенні */
+}
+.aroma-card-title img.aroma-card-icon{
+    width: 44px;
+}
+
+.aroma-card-title{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.aroma-card h3 {
+    margin: 0;
+}
+
+.aroma-card img {
+    width: 100%; /* Зображення займає всю ширину карточки */
+    height: auto; /* Висота зображення автоматично адаптується */
+    margin-bottom: 15px;
+}
+
+
+
+.aroma-card p {
+    font-size: 22px;
+    margin: 0;
+}
+
+.aroma-card-order{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.order-button {
+    background-color: var(--lightGray);
+    border: none;
+    font-size: 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--lightGray);
+}
+
+.order-button:hover{
+    border-style: dashed;
+    border-color:var(--semi-black);
+}
+
+.order-button span {
+    flex-grow: 1; 
+    text-align: center; 
+    padding: 0px 15px;
+}
+
+.order-button .icon-shopping-cart {
+    right: -5px;
+    background-color: var(--semi-black);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 0px;
+    display: block;
+    position: relative;
+    width: 25px;
+}
+
+.order-button.women .icon-shopping-cart{
+    background-color: var(--red);
+}
+
+.order-button .unisex {
+    background-color: red;
+    border-radius: 50px;
+    width: 50px;
+    right: -5px;
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .aroma-selection {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px 0px;
+    }
+    .aroma-card-title{
+        gap: 1rem;
+    }
+    .aroma-card-title h3{
+        font-size: 16px;
+    }
+    .aroma-card-order{
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .order-button span{
+        text-align: left;
+    }
+}
+
+
+
+
+/* Discount set */
+.set-discount {
+    position: relative;
+    color: white;
+    background: url('images/discount-set-hero.jpg') no-repeat center center / cover;
+
+}
+
+.set-discount-container  {
+    display: flex;
+    padding: 50px 20px;
+    align-items: center;
+
+}
+
+.set-discount-image{
+    flex: 1; /* Рівне поділення простору між колонками */
+
+}
+
+.set-discount-description {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.set-discount-description h2{
+    font-size: 50px;
+    font-weight: 900;
+    margin: 0px;
+}
+.set-discount-description h3{
+    font-size: 80px;
+    font-weight: 900;
+    margin: 0px;
+}
+.set-discount-description p{
+    font-size: 20px;
+}
+
+.set-discount-image img {
+    max-width: 100%;
+}
+
+/* Steps */
+.steps {
+    text-align: center;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.icon-container {
+    width: 136px;
+    height: 136px;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px;
+    border-style: dashed;
+    border-color:var(--semi-black);
+}
+
+.icon-container svg{
+    fill: var(--red);
+}
+
+.icon-container img {
+    width: 50%; /* Зменшення іконки всередині контейнера */
+    height: auto;
+}
+.steps-text-box{
+    margin-top: 2rem;
+    max-width: 350px ;
+}
+.step-title {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.step-description {
+    font-size: 16px;
+    color: var(--semi-black);
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content{
+        padding: 0 15px;
+    }
+    
+    h2.large {
+        font-size: 40px;
+      }
+      h3.large {
+        font-size: 50px;
+      }
+      .features-container{
+          row-gap: 2rem;
+      }
+      .create-your-look-call{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .triangle, .image-content, .set-discount-image{
+        display: none;
+    }
+    .set-discount-image-mob img, .image-content-mob img{
+        width: 80%;
+    text-align: center;
+    }
+    .create-your-look-content, .set-discount-container {
+        padding: 45px 15px;
+    }
+    .set-discount-description p{
+        width: 100%;
+    }
+    .create-your-look-content, .set-discount-container, .set-discount-description, .create-your-look-call{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    
+    }
+    .set-discount-container, .content-container {
+        flex-direction: column;
+    }
+    .steps-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        width: auto;
+    }
+    .steps-text-box {
+        width: auto;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .circle-image::after{
+        content: "";
+        display: block;
+        height: 280px;
+        width: 280px;
+        border-radius: 100%;
+        position: absolute;
+        background: rgb(238 56 56 / 20%);
+    
+    }
+
+    .steps-container .step:not(:first-child)::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 10%;
+        right: 35%;
+        z-index: 0;
+        background-image: url(images/icons/dashed-line.svg);
+        background-repeat: no-repeat;
+        background-size: 60%;
+    }
+
+    .steps-container .step:last-child::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: -10%;
+        transform: scaleY(-1);
+    }
+
+    .aroma-card .aroma-card-img::before{
+        content: "";
+        display: block;
+        min-height: 245px;
+        width: 40px;
+        background-image: url(images/mirumika-shape.svg);
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .set-discount-image-mob img, .image-content-mob img{
+        display: none;
+    }
+
+    .content-container, .create-your-look{
+    height: 480px;
+    }
+
+}
